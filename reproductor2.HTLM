@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Reproductor de Videos</title>
+</head>
+<body>
+    <h2>Lista de Reproducción</h2>
+    <ul>
+        <li><a href="#" onclick="cambiarVideo('https://drive.google.com/file/d/1HXNaL6FoOzrmEhJZXbBaYo3P4wpa-idt/view?usp=sharing')">Video 1</a></li>
+        <li><a href="#" onclick="cambiarVideo('URL_DEL_VIDEO_2')">Video 2</a></li>
+        <li><a href="#" onclick="cambiarVideo('URL_DEL_VIDEO_3')">Video 3</a></li>
+        <!-- Agrega más elementos de lista según sea necesario -->
+    </ul>
+
+    <video id="reproductor" width="640" height="360" controls>
+        <source id="fuenteVideo" src="" type="video/mp4">
+        Tu navegador no soporta el tag de video.
+    </video>
+
+    <script>
+        function cambiarVideo(url) {
+            document.getElementById('fuenteVideo').src = url;
+            document.getElementById('reproductor').load();
+            document.getElementById('reproductor').play();
+        }
+    </script>
+</body>
+</html>
